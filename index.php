@@ -1,17 +1,14 @@
 <?php
 // Informations de connexion à la base de données
-$serveur = "localhost";
-$utilisateur = "nom_utilisateur";
-$mot_de_passe = "mot_de_passe";
-$base_de_donnees = "nom_base_de_donnees";
+$connexionSTRING = getenv('AZURE_POSTGRESQL_CONNECTIONSTRING');
+$connectionString = $connexionSTRING; // Correction de la faute de frappe
+$username = "gwzbvjttiw";
+$password = "G3g9kwrHhtLjQ$vW";
 
 // Connexion à la base de données
 $connexion = pg_connect("host=db-serv.postgres.database.azure.com port=5432 dbname=postgres user=gwzbvjttiw password=G3g9kwrHhtLjQ$vW");
 
-// Vérifier la connexion
-if (!$connexion) {
-    die("Erreur de connexion à la base de données : " . mysqli_connect_error());
-}
+
 
 // Vérifier si le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
