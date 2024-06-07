@@ -7,8 +7,8 @@ $username = "gwzbvjttiw";
 $password = "G3g9kwrHhtLjQ$vW";
 
 try {
-    $conn = new PDO($connectionString, $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn = pg_connect("host=db-serv.postgres.database.azure.com port=5432 dbname=postgres user=gwzbvjttiw password=G3g9kwrHhtLjQ$vW");
+    
     echo "Connexion réussie à la base de données.";
 } catch(PDOException $e) {
     die("Échec de la connexion à la base de données : " . $e->getMessage());
