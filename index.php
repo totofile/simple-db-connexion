@@ -2,7 +2,7 @@
 // Connexion à la base de données avec une connexion string Azure
 
 $connexionSTRING = getenv('AZURE_POSTGRESQL_CONNECTIONSTRING');
-$connectionString = $connectionSTRING;
+$connectionString = $connexionSTRING; // Correction de la faute de frappe
 $username = "gwzbvjttiw";
 $password = "G3g9kwrHhtLjQ$vW";
 
