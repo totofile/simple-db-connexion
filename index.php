@@ -44,3 +44,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Fermer la connexion à la base de données
 $conn = null;
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire de connexion</title>
+</head>
+<body>
+    <h1>Formulaire de connexion</h1>
+    <form method="POST" action="">
+        <label for="username">Nom d'utilisateur:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Mot de passe:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <input type="submit" value="Se connecter">
+    </form>
+</body>
+</html>
