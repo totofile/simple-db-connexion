@@ -16,7 +16,7 @@
     $password = "G3g9kwrHhtLjQ$vW";
 
     try {
-        $conn = pg_connect("host=db-serv.postgres.database.azure.com port=5432 dbname=postgres user=gwzbvjttiw password=G3g9kwrHhtLjQ$vW");
+        $conn = pg_connect($connexionSTRING);
         
         echo "Connexion réussie à la base de données.";
     } catch(PDOException $e) {
